@@ -16,6 +16,7 @@
 		4A04D3472A46AF7600C6503C /* ExUploadDownloadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A04D3462A46AF7600C6503C /* ExUploadDownloadTests.swift */; };
 		4A04D3512A46AF7600C6503C /* ExUploadDownloadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A04D3502A46AF7600C6503C /* ExUploadDownloadUITests.swift */; };
 		4A04D3532A46AF7600C6503C /* ExUploadDownloadUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A04D3522A46AF7600C6503C /* ExUploadDownloadUITestsLaunchTests.swift */; };
+		4A04D3602A46FD9B00C6503C /* IndividualUploadTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A04D35F2A46FD9B00C6503C /* IndividualUploadTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		4A04D34C2A46AF7600C6503C /* ExUploadDownloadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExUploadDownloadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A04D3502A46AF7600C6503C /* ExUploadDownloadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExUploadDownloadUITests.swift; sourceTree = "<group>"; };
 		4A04D3522A46AF7600C6503C /* ExUploadDownloadUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExUploadDownloadUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4A04D35F2A46FD9B00C6503C /* IndividualUploadTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualUploadTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				4A04D32F2A46AF7400C6503C /* AppDelegate.swift */,
 				4A04D3312A46AF7400C6503C /* SceneDelegate.swift */,
 				4A04D3332A46AF7400C6503C /* ViewController.swift */,
+				4A04D35F2A46FD9B00C6503C /* IndividualUploadTask.swift */,
 				4A04D3352A46AF7400C6503C /* Main.storyboard */,
 				4A04D3382A46AF7500C6503C /* Assets.xcassets */,
 				4A04D33A2A46AF7500C6503C /* LaunchScreen.storyboard */,
@@ -260,6 +263,7 @@
 			files = (
 				4A04D3342A46AF7400C6503C /* ViewController.swift in Sources */,
 				4A04D3302A46AF7400C6503C /* AppDelegate.swift in Sources */,
+				4A04D3602A46FD9B00C6503C /* IndividualUploadTask.swift in Sources */,
 				4A04D3322A46AF7400C6503C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

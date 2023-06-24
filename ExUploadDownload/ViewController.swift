@@ -16,14 +16,14 @@ class ViewController: UIViewController {
     
     func uploadImageUsingURLSession(imageData: Data, completion: @escaping (Error?) -> Void) {
         let url = URL(string: "https://example.com/upload")
-
+        
         var request = URLRequest(url: url!)
         request.httpMethod = "POST"
-
+        
         let uniqString = UUID().uuidString
         let contentType = "multipart/form-data; boundary=\(uniqString)"
         request.setValue(contentType, forHTTPHeaderField: "Content-Type")
-
+        
         /// 폼 데이터 생성
         var body = Data()
         
@@ -45,7 +45,11 @@ class ViewController: UIViewController {
         /// 멀티파트 데이터의 끝을 나타내는 경계값을 추가하며 멀티파트 데이터의 마지막을 나타내고 파트들을 닫는 역할
         body.append("--\(uniqString)--\r\n".data(using: .utf8)!)
         
-        let task = URLSession.shared.uploadTask(with: request, from: body) { (data, response, error) in
+        let session = URLSession(configuration: .default)
+        session.configuration.timeoutIntervalForRequest = TimeInterval(20)
+        session.configuration.timeoutIntervalForResource = TimeInterval(20)
+        
+        let task = session.uploadTask(with: request, from: body) { (data, response, error) in
             DispatchQueue.main.async {
                 if let error = error {
                     completion(error)
@@ -57,9 +61,11 @@ class ViewController: UIViewController {
             }
         }
         
+        task.delegate = self
+        
         task.resume()
     }
-
+    
 }
 
 extension ViewController: URLSessionTaskDelegate {
